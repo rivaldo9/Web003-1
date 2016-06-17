@@ -21,7 +21,7 @@
 
 <!-- Header -->
 <header class="w3-container w3-theme w3-padding" id="myHeader">
-  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-opennav"></i>
+  <span class="w3-opennav w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
   <div class="w3-center">
   <h4>Compartilhe com nossa comunidade!</h4>
   <h1 class="w3-xxxlarge w3-animate-bottom">Anuncios</h1>
@@ -81,15 +81,15 @@
 <script>
 // Side navigation
 function w3_open() {
-    document.getElementsByClassName("w3-sidenav")[0].style.width = "100%";
-    document.getElementsByClassName("w3-sidenav")[0].style.textAlign = "center";
-    document.getElementsByClassName("w3-sidenav")[0].style.fontSize = "50px";
-    document.getElementsByClassName("w3-sidenav")[0].style.paddingTop = "10%";
     document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+    document.getElementsByClassName("w3-overlay")[0].style.display = "block";
 }
+ 
 function w3_close() {
     document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+    document.getElementsByClassName("w3-overlay")[0].style.display = "none";
 }
+
 
 // Tabs
 function openCity(evt, cityName) {
